@@ -146,6 +146,7 @@ router.route ('/login')
 router.route ('/logout')
  .get (async (req, res) => {
    if (req.session.user) {
+     console.log ("test");
      let user = req.session.user.username;
      await req.session.destroy ();
      await res.clearCookie ('user_sid');

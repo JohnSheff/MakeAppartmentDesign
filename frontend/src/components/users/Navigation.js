@@ -51,6 +51,7 @@ class Navigation extends Component {
             }
           });
           let result = await response.json ();
+          console.log (result);
           this.props.logout (!result);
           this.props.history.push ('/login');
           this.openNotification (result.user);

@@ -21,12 +21,11 @@ app.use(express.static(publicPath))
 
 http.createServer (app).listen (process.env.PORT || 5010)
 app.use (logger ('dev'));
-// const port = '5010';
-// app.set ('port', "5010");
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(publicPath, 'index.html'));
-});
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(publicPath, 'index.html'));
+// });
 
 app.use (session ({
   store: new Filestore (), key: 'user_sid', secret: 'anything', resave: false, saveUninitialized: false, cookie: {
@@ -38,7 +37,3 @@ app.use (bodyParser.json ());
 
 app.use (cookieParser ());
 app.use ('/', indexRouter);
-
-// const server = http.createServer (app);
-//
-// server.listen ("5010");
