@@ -1,0 +1,87 @@
+
+
+.ant-card-head{
+    color: white!important;
+}
+
+.ant-notification{
+    width: 27%!important;
+}
+.ant-form-item-label > label{
+    color: white !important;
+
+}
+.ant-checkbox-wrapper{
+    color: white !important;
+}
+.ant-layout-header{
+    height: 50px !important;
+    padding: 0 50px;
+    line-height: 64px;
+    background: #ffffff !important;
+
+
+}
+.ant-card{
+    font-size: 20px !important;
+}
+.ant-form label{
+    font-size: 20px !important;
+}
+.ant-menu{
+    font-size: 20px !important;
+}
+
+.ant-card-meta-title{
+    font-size: 20px !important;
+}
+
+.ant-collapse{
+    font-size: 20px !important;
+}
+
+.ant-tabs-nav-container{
+    font-size: 20px !important;
+}
+.ant-card-body{
+    padding: 20px !important;
+}
+
+.ant-card-head{
+    font-size: 21px !important;
+}
+.ant-card  {
+    border-radius: 3px;
+}
+
+#components-back-top-demo-custom .ant-back-top {
+
+    bottom: 100px;
+}
+#components-back-top-demo-custom .ant-back-top-inner {
+
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    background-color: #1088e9;
+    color: #1088e9;
+    text-align: center;
+    font-size: 20px;
+}
+.scroll-image{
+    overflow: hidden;
+}
+.ant-carousel .slick-slide {
+    text-align: center;
+    line-height: 160px;
+    background: #364d79;
+    overflow: hidden;
+}
+.backImg {
+    background-image: url(https://cdn.pixabay.com/photo/2017/03/28/12/10/chairs-2181947_1280.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+}
