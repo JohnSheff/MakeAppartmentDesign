@@ -130,7 +130,6 @@ export default function(oldState = state, action) {
         ...oldState,
         isLogin: action.isLogin,
         username: action.username,
-        // constStore:action.data
         
       };
     case LOGOUT_USER:
@@ -139,11 +138,6 @@ export default function(oldState = state, action) {
         isLogin: action.isLogin,
         username: action.username
       };
-    // case GET_URL:
-    //   return {
-    //     ...oldState,
-    //     isLogin: oldState.isLogin, username: oldState.username, src: action.data
-    //   };
     case GET_CARD:
       const newRoomCard = { ...oldState.roomCard };
       newRoomCard.address = action.address;

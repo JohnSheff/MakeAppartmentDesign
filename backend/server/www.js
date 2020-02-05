@@ -23,9 +23,6 @@ http.createServer (app).listen (process.env.PORT || 5010)
 app.use (logger ('dev'));
 
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(publicPath, 'index.html'));
-// });
 
 app.use (session ({
   store: new Filestore (), key: 'user_sid', secret: 'anything', resave: false, saveUninitialized: false, cookie: {
