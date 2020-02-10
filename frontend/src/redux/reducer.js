@@ -1,5 +1,5 @@
-import {ADD_USER, CLEAR_PRESET, GET_CARD, GET_MAP, LOGIN_USER, LOGOUT_USER, SET_PRESET} from './actions';
-import {PRICE_ACTION, PRICE_BATH, PRICE_BATHFLOOR, PRICE_DOOR, PRICE_ELECTRIC, PRICE_FLOOR, PRICE_KERAMAWALL, PRICE_LIGHT, PRICE_LOCKER, PRICE_MOLDING, PRICE_PLINT, PRICE_SHOWER, PRICE_SILL, PRICE_TOILET, PRICE_APRON, PRICE_KITCHEN} from './price';
+import { ADD_USER, CLEAR_PRESET, GET_CARD, GET_MAP, LOGIN_USER, LOGOUT_USER, SET_PRESET } from './actions';
+import { PRICE_ACTION, PRICE_BATH, PRICE_BATHFLOOR, PRICE_DOOR, PRICE_ELECTRIC, PRICE_FLOOR, PRICE_KERAMAWALL, PRICE_LIGHT, PRICE_LOCKER, PRICE_MOLDING, PRICE_PLINT, PRICE_SHOWER, PRICE_SILL, PRICE_TOILET, PRICE_APRON, PRICE_KITCHEN } from './price';
 import dataBase from '../components/construtor/dataBase';
 import dataBase2 from '../components/construtor/dataBase2';
 import dataBase3 from '../components/construtor/dataBase3';
@@ -11,7 +11,7 @@ const state = {
     price: null,
     desPrice: 0,
     perePlanPrice: 0
-    },
+  },
   isLogin: false,
   username: null,
   ymaps: null,
@@ -34,11 +34,12 @@ const state = {
   priceApron: 0
 };
 
-export default function(oldState = state, action) {
+export default function (oldState = state, action) {
+// Тут молодцы, с редьюсерами разобрались.
   switch (action.type) {
     case PRICE_ACTION:
       return {
-...oldState,
+        ...oldState,
         priceAction: [...oldState.priceAction, action.priceAction],
       };
     case PRICE_DOOR:
@@ -130,7 +131,7 @@ export default function(oldState = state, action) {
         ...oldState,
         isLogin: action.isLogin,
         username: action.username,
-        
+
       };
     case LOGOUT_USER:
       return {

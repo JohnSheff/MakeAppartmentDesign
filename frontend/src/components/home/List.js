@@ -7,6 +7,7 @@ import UploadImg from './Upload';
 class List extends Component {
 
   totalPrice=()=>{
+// Не очень красивый метод. Опять длиннющие строки.
     const{priceKitchen, priceApron, priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
 
     let sumPrice=priceKitchen+priceApron+priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
@@ -44,8 +45,10 @@ class List extends Component {
 
 function mapStateToProps(store) {
   return {
-    
-    isLogin: store.isLogin, username: store.username, ymaps: store.ymaps,roomCard: store.roomCard,
+    isLogin: store.isLogin, 
+    username: store.username, 
+    ymaps: store.ymaps,
+    roomCard: store.roomCard,
     priceDoor: store.priceDoor,
     priceElectric: store.priceElectric,
     priceFloor: store.priceFloor,

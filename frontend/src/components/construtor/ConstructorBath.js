@@ -1,15 +1,18 @@
-import React, { Component } from "react";
+// Внимательнее к кавычкам.
+import React, { Component } from 'react';
 import {Button, Card, Col, Collapse, Row, Icon, Affix} from 'antd';
-import { connect } from "react-redux";
-import image from "../../img/bath/kerama_wall/kerama_belkanto.png";
-import ceramic from "../../img/construct_bath/kerama_belkanto_fregat.png";
-import thumb from "../../img/construct_bath/godmorgon_white.png";
-import toilet from "../../img/construct_bath/cersanit_parva.png";
-import floor from "../../img/construct_bath/bravat_opal.png";
-import shower from "../../img/construct_bath/bravat_opal.png";
-import bath from "../../img/bath/bath/cersanit_octavia.png";
-import locker from "../../img/bath/locker/locker_white.png";
+import { connect } from 'react-redux';
+import image from '../../img/bath/kerama_wall/kerama_belkanto.png';
+import ceramic from '../../img/construct_bath/kerama_belkanto_fregat.png';
+import thumb from '../../img/construct_bath/godmorgon_white.png';
+import toilet from '../../img/construct_bath/cersanit_parva.png';
+import floor from '../../img/construct_bath/bravat_opal.png';
+import shower from '../../img/construct_bath/bravat_opal.png';
+import bath from '../../img/bath/bath/cersanit_octavia.png';
+import locker from '../../img/bath/locker/locker_white.png';
 import {
+  // Почему action creators все с заглавной буквы?
+  // Это же просто функции.
   AddPriceBathAC,
   AddPriceBathFloorAC,
   AddPriceKeramaWallAC,
@@ -17,8 +20,8 @@ import {
   AddPriceShowerAC,
   AddPriceToiletAC,
   AddActionAC
-} from "../../redux/priceCreators";
-import { ClearPresetAC } from "../../redux/creators";
+} from '../../redux/priceCreators';
+import { ClearPresetAC } from '../../redux/creators';
 
 const {Meta} = Card;
 const {Panel} = Collapse;
@@ -72,6 +75,9 @@ class ConstructorBath extends Component {
               height={this.state.height}
               alt={"test"}
             />
+            {/* Удаляйте закомментированных код */}
+            {/* А то выглядит, как будто у вас просто не хватает силы воли */}
+            {/* Чтобы избавиться от кода, написанного вашими руками */}
             {/*<img key={'3'}*/}
             {/*     style={{position: 'absolute', zIndex: '3', transform:`${this.state.invert}`}}*/}
             {/*     src={this.state.ceramic}*/}
@@ -351,30 +357,15 @@ function mapStateToProps(store) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    addPriceBath: data => {
-      dispatch(AddPriceBathAC(data));
-    },
-    addPriceBathFloor: data => {
-      dispatch(AddPriceBathFloorAC(data));
-    },
-    addPriceKeramaWall: data => {
-      dispatch(AddPriceKeramaWallAC(data));
-    },
-    addPriceLocker: data => {
-      dispatch(AddPriceLockerAC(data));
-    },
-    addPriceShower: data => {
-      dispatch(AddPriceShowerAC(data));
-    },
-    addPriceToilet: data => {
-      dispatch(AddPriceToiletAC(data));
-    },
-    clearPresetAC: () => {
-      dispatch(ClearPresetAC());
-    },
-    addActionPriceAC: (data) => {
-      dispatch(AddActionAC(data))
-    }
+    // это можно немного сократить.
+    addPriceBath: data => dispatch(AddPriceBathAC(data)),
+    addPriceBathFloor: data => dispatch(AddPriceBathFloorAC(data)),
+    addPriceKeramaWall: data => dispatch(AddPriceKeramaWallAC(data)),
+    addPriceLocker: data => dispatch(AddPriceLockerAC(data)),
+    addPriceShower: data => dispatch(AddPriceShowerAC(data)),
+    addPriceToilet: data => dispatch(AddPriceToiletAC(data)),
+    clearPresetAC: () => dispatch(ClearPresetAC()),
+    addActionPriceAC: (data) => dispatch(AddActionAC(data))
   };
 }
 

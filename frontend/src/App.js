@@ -1,3 +1,4 @@
+// Этот код не нужен? Так удалите файл.
 // import React, {Component} from 'react';
 // import ViewTodo from './components/todolist/ViewTodo';
 // import AddTodo from './components/todolist/AddTodo';

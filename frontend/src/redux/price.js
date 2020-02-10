@@ -1,3 +1,4 @@
+// Из названия файла вообще непонятно что внури лежит
 const PRICE_ACTION ='PRICE_ACTION';
 
 const PRICE_DOOR ='PRICE_DOOR';

@@ -37,6 +37,8 @@ class Routers extends Component {
     }
   }
   totalPrice=()=>{
+    // я думаю все эти цены надо в каком-то массиве или объекте хранить в пропсах.
+    // а то некрасиво получается.
     const{priceKitchen,priceApron,priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
     let sumPrice=priceApron+priceKitchen+priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
     return sumPrice

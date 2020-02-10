@@ -134,6 +134,7 @@ class Home extends Component {
              <Col offset={2} span={2}>
                <Form.Item>
                  <Button type="primary" htmlType="submit" onClick={() => {
+                  //  нельзя такие длинные строчки оставлять
                    let totalPrice = (this.state.m2 * 10000) + (this.state.countBath * 30000) + (this.state.countDoor * 10000) + (this.state.countRoom * this.state.perePlanPrice) + (this.state.desPrice * this.state.m2);
                    if (address!== null&&m2!== null&& countBath!== null&& countDoor!== null&& countRoom !== null) {
                      this.props.addCardAC (address, m2, countBath, countDoor, countRoom, desPrice, perePlanPrice, totalPrice);

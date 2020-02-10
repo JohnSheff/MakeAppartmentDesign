@@ -1,3 +1,5 @@
+// Жуть) Рекомундую импортировать каким-то другим способом.
+// почитайте как делать импорт сразу же всех файлов папки.
 import image222 from "../../img/room/default(2).png";
 import image444 from "../../img/room/bimetal.png";
 import image255 from "../../img/construct/window.png";
@@ -710,21 +712,5 @@ export default {
       bath: bath1p,
       locker: locker1p
     },
-    // {
-    //   title: "Elegant White",
-    //   img: imgElegant,
-    //   floor: image11p,
-    //   light: light3p,
-    //   door: image18p,
-    //   elecric: elecric1p,
-    //   molding: molding2p,
-    //   srcPlint: plint4p,
-    //   background: "rgb(246, 246, 246)",
-    //   floorBath: floor3p,
-    //   keramaWall: keramaWall4p,
-    //   toilet: toilet2p,
-    //   bath: bath1p,
-    //   locker: locker1p
-    // }
   ]
 };
