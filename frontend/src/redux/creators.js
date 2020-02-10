@@ -9,6 +9,8 @@ import {
   CLEAR_PRESET
 } from "./actions";
 
+// Всё с маленькой буквы пишется обычно. Потому что это всего лишь функции.
+
 export const AddUserAC = (status, user) => {
   return {
     type: ADD_USER,
@@ -40,6 +42,7 @@ export const GetUrlAC = data => {
 };
 export const GetCardAC = (
   address,
+  // что такое m2?
   m2,
   countBath,
   countDoor,

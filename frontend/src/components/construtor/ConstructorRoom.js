@@ -27,6 +27,9 @@ class ConstructorRoom extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // Не надо транслита. Окно window. Да, есть такая переменная в js,
+      // которая является служебной. можно придумать что-то вроде 
+      // roomWindow, windows, furnitureWindow 
       okno:okno,
       bimetal:bimetal,
       potolor:potolor,

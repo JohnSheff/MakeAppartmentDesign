@@ -128,21 +128,16 @@ class ConstructorKitchen extends Component {
 
 function mapStateToProps(store) {
   return {
+    // storage? неподходящее название. Поконкретнее.
     storage: store.kitchenStore
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    addActionPriceAC: (data) => {
-      dispatch(AddActionAC(data))
-    },
-    addKitchenAC: (data) => {
-      dispatch(AddPriceKitchenAC(data))
-    },
-    addApronAC: (data) => {
-      dispatch(AddPriceApronAC(data))
-    }
+    addActionPriceAC: (data) => dispatch(AddActionAC(data)),
+    addKitchenAC: (data) => dispatch(AddPriceKitchenAC(data)),
+    addApronAC: (data) => dispatch(AddPriceApronAC(data))
   };
 }
 
