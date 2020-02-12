@@ -22,6 +22,9 @@ app.use(express.static(publicPath))
 http.createServer(app).listen(process.env.PORT || 5010)
 app.use(logger('dev'));
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
 
 
 app.use(session({
