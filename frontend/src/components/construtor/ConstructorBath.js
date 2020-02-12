@@ -1,4 +1,3 @@
-// Внимательнее к кавычкам.
 import React, { Component } from 'react';
 import {Button, Card, Col, Collapse, Row, Icon, Affix} from 'antd';
 import { connect } from 'react-redux';
@@ -11,8 +10,6 @@ import shower from '../../img/construct_bath/bravat_opal.png';
 import bath from '../../img/bath/bath/cersanit_octavia.png';
 import locker from '../../img/bath/locker/locker_white.png';
 import {
-  // Почему action creators все с заглавной буквы?
-  // Это же просто функции.
   AddPriceBathAC,
   AddPriceBathFloorAC,
   AddPriceKeramaWallAC,
@@ -31,7 +28,6 @@ class ConstructorBath extends Component {
     super (props);
     this.state = {
       width: '100%',
-      // height: '600px',
       wall: image,
       ceramic: ceramic,
       floor: floor,
@@ -75,16 +71,6 @@ class ConstructorBath extends Component {
               height={this.state.height}
               alt={"test"}
             />
-            {/* Удаляйте закомментированных код */}
-            {/* А то выглядит, как будто у вас просто не хватает силы воли */}
-            {/* Чтобы избавиться от кода, написанного вашими руками */}
-            {/*<img key={'3'}*/}
-            {/*     style={{position: 'absolute', zIndex: '3', transform:`${this.state.invert}`}}*/}
-            {/*     src={this.state.ceramic}*/}
-            {/*     width={this.state.width}*/}
-            {/*     height={this.state.height}*/}
-            {/*     alt={'test'}*/}
-            {/*/>*/}
             <img
               key={"4"}
               style={{

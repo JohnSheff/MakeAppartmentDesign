@@ -18,7 +18,7 @@ import lamp from "../../img/room/light/lightstar.png";
 import energy from "../../img/room/electric/legrand.png";
 import potolor from "../../img/room/default(2).png";
 import bimetal from "../../img/room/bimetal.png";
-import okno from "../../img/construct/window.png";
+import roomWindow from "../../img/construct/window.png";
 
 const { Meta } = Card;
 const { Panel } = Collapse;
@@ -27,10 +27,7 @@ class ConstructorRoom extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // Не надо транслита. Окно window. Да, есть такая переменная в js,
-      // которая является служебной. можно придумать что-то вроде 
-      // roomWindow, windows, furnitureWindow 
-      okno:okno,
+      roomWindow:roomWindow,
       bimetal:bimetal,
       potolor:potolor,
       width: "100%",
@@ -62,7 +59,7 @@ class ConstructorRoom extends Component {
                  zIndex: "7",
                  transform: `${this.state.invert}`
                }}
-               src={this.state.okno}
+               src={this.state.roomWindow}
                width={this.state.width}
                height={this.state.height}
                alt={"test"}

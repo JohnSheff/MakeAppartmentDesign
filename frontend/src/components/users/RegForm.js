@@ -64,7 +64,7 @@ class RegForm extends React.Component {
                   prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   placeholder="Username"
                   autoComplete="Username"
-                  required="required"
+                  required="true"
                   value={username} onChange={(e) => {
                     this.setState({ username: e.target.value });
                   }} />
@@ -75,7 +75,7 @@ class RegForm extends React.Component {
 
                   prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   type="password"
-                  required="required"
+                  required="true"
                   placeholder="Password"
                   autoComplete="current-password"
                   value={password} onChange={(e) => {
@@ -86,7 +86,7 @@ class RegForm extends React.Component {
                 <Input
 
                   prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                  required="required"
+                  required="true"
                   placeholder="Email"
                   autoComplete="current-password"
                   value={email}
@@ -121,13 +121,8 @@ class RegForm extends React.Component {
               </Form.Item>
             </Form>
           </Col>
-
             : (<Redirect to="/" />)}
-
-
         </Card>
-
-
       </div>);
   }
 }

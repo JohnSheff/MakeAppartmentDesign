@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Affix, Button, Card, Col, Collapse, Icon, Row} from 'antd';
-// import {GetUrlAC} from '../../redux/creators';
 import {connect} from 'react-redux';
 import ceramic_white from '../../img/kitchen/без плитки.png';
 import kitchen from '../../img/kitchen/кухня1.1.png';
@@ -128,7 +127,6 @@ class ConstructorKitchen extends Component {
 
 function mapStateToProps(store) {
   return {
-    // storage? неподходящее название. Поконкретнее.
     storage: store.kitchenStore
   };
 }

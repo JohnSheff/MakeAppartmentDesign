@@ -15,7 +15,6 @@ class LoginForm extends Component {
 
   openOkNotification = () => {
     notification.open({
-
       icon: <Icon type="smile" style={{ color: '#108ee9' }} />,
       message: 'Добро пожаловать',
       description:
@@ -36,8 +35,6 @@ class LoginForm extends Component {
 
   render() {
     const { username, password } = this.state;
-
-
     return (
       <div className={"backImg"} style={{ display: "flex", justifyContent: "center", marginTop: "10px", minHeight: 1300, paddingTop: 50 }}>
         <Card title="Добро пожаловать!" style={{ width: "40%", backgroundColor: "#282c34", opacity: "0.90", height: "10%" }}>
@@ -45,11 +42,10 @@ class LoginForm extends Component {
             {this.props.isLogin === false ? (<Form layout="horizontal">
               <Form.Item label="Username">
                 <Input
-
                   prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   placeholder="Введите ваш логин"
                   autoComplete="Username"
-                  required="required"
+                  required="true"
                   onChange={(e) => this.setState({ username: e.target.value })}
                 />
               </Form.Item>
@@ -57,8 +53,7 @@ class LoginForm extends Component {
                 <Input.Password
                   prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   type="password"
-                  // required="required"? Точно?
-                  required="required"
+                  required="true"
                   placeholder="Введите ваш пароль"
                   autoComplete="current-password"
                   onChange={(e) => this.setState({ password: e.target.value })}
@@ -83,7 +78,6 @@ class LoginForm extends Component {
                   }
                   else {
                     this.openNotification()
-                    // await alert ('Не правильно введены Логин и Пароль, по пробуйте еще раз.');
                   }
                 }}>
                   Log in
@@ -91,7 +85,6 @@ class LoginForm extends Component {
               </Form.Item>
             </Form>) : (<Redirect to="/" />
               )}
-
           </Col>
         </Card>
       </div>

@@ -7,9 +7,7 @@ import UploadImg from './Upload';
 class List extends Component {
 
   totalPrice=()=>{
-// Не очень красивый метод. Опять длиннющие строки.
     const{priceKitchen, priceApron, priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
-
     let sumPrice=priceKitchen+priceApron+priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
     return sumPrice
   }

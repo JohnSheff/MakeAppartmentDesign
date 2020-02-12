@@ -35,7 +35,6 @@ const state = {
 };
 
 export default function (oldState = state, action) {
-// Тут молодцы, с редьюсерами разобрались.
   switch (action.type) {
     case PRICE_ACTION:
       return {

@@ -84,7 +84,6 @@ import elecric1 from "../../img/room/electric/legrand.jpg";
 import elecric1p from "../../img/room/electric/legrand.png";
 import elecric2 from "../../img/room/electric/legrand_black.jpg";
 import elecric2p from "../../img/room/electric/legrand_black.png";
-// import imgElegant from "../../img/preset/elegant-white.png";
 import imgClassic from "../../img/preset/exquisite-classic.png";
 import imgPeach from "../../img/preset/peach-dreams.png";
 import imgVivaro from "../../img/preset/vivaro-alpine.png";

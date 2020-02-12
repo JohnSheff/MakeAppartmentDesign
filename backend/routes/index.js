@@ -1,20 +1,8 @@
-// Подозрительно мало кода на беке)
 const express = require('express');
 const router = express.Router();
 const User = require('../models/users');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
-
-router.route('/')
-  .get(function (req, res) {
-    res.send('ok');
-  });
-
-
-router.route('/favicon.ico')
-  .get(function (req, res) {
-    res.send('ok');
-  });
 
 router.route('/signIn')
   .get(function (req, res) {
@@ -32,8 +20,6 @@ router.route('/signIn')
       req.session.user = user;
       await res.json({ result: true });
     } catch (e) {
-      // Чтобы не писать свои result, можно использовать стандартные статусы ответов. (200, 404, 500, ...)
-      // res.status(404).send('not found') - по типу такого.
       return await res.json({ result: false, error: e });
     }
   });

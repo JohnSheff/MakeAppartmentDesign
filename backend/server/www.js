@@ -10,7 +10,6 @@ require('dotenv').config()
 const path = require('path');
 const mongoose = require('mongoose');
 const app = express();
-// @clusterelbrus-ntmbz.mongodb.net/makeApp?retryWrites=true&w=majority` - это тоже лучше в переменные окружения прятать.
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@clusterelbrus-ntmbz.mongodb.net/makeApp?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

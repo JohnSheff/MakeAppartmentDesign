@@ -1,7 +1,3 @@
-// Это не actions. Это types of actions. 
-// В принципе не важно как вы назвали файл,
-// Важно понимать что сами экшены - объекты у которых есть 
-// Данные и поле type, а вот в этом поле лежат нижеприведенные типы.
 const LOGOUT_USER ='LOGOUT_USER';
 const ADD_USER ='ADD_USER';
 const LOGIN_USER ='LOGIN_USER';

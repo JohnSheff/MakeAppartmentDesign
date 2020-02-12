@@ -87,4 +87,4 @@ export const AddPriceApronAC = (data) => {
     type: PRICE_APRON,
     priceApron: data
   }
-}
+};
