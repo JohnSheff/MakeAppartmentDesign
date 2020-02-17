@@ -48,7 +48,7 @@ class Home extends Component {
     return (<div className={"backImg"} style={{display: 'flex', justifyContent: 'center', marginTop: '10px', minHeight:1300,
     paddingTop:50}}>
       {change ?
-       <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: '#282c34', width: '60%', height:"1%", opacity: '0.90'}}>
+       <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: '#282c34', width: '60%', height:"1%", opacity: '0.90', minWidth:600}}>
          <Form>
            <Row style={{margin: 5, padding: 5}}>
            <Col offset={2} span={12}>
@@ -61,7 +61,7 @@ class Home extends Component {
            </Col>
            <Col span={4} offset={3}>
              <Form.Item label="Площадь м2" hasFeedback>
-               <Input style={{width: 100}} type="number" name="city" id="exampleCity" placeholder="м2"
+               <Input style={{width: "100%"}} type="number" name="city" id="exampleCity" placeholder="м2"
                       onChange={e => {
                         this.setState ({m2: e.target.value});
                       }}
@@ -71,7 +71,7 @@ class Home extends Component {
            <Row style={{margin: 5, padding: 5}}>
              <Col offset={2} span={5}>
                <Form.Item label="Количество комнат" style={{color: 'white'}}>
-                 <Select style={{width: 120}} onChange={e => {
+                 <Select style={{width: "81%"}} onChange={e => {
                  
                    this.setState ({countRoom: e});
                  }}>
@@ -85,7 +85,7 @@ class Home extends Component {
              </Col>
              <Col offset={3} span={5}>
                <Form.Item label={'Количество дверей'}>
-                 <Select style={{width: 100}} onChange={(e) => this.setState ({countDoor: e})}>
+                 <Select style={{width: "81%"}} onChange={(e) => this.setState ({countDoor: e})}>
                    
                    <Option value="1">1</Option>
                    <Option value="2">2</Option>
@@ -97,7 +97,7 @@ class Home extends Component {
              </Col>
              <Col offset={2} span={5}>
                <Form.Item label="Количество санузлов">
-                 <Select style={{width: 100}} onChange={(e) => this.setState ({countBath: e})}>
+                 <Select style={{width: "81%"}} onChange={(e) => this.setState ({countBath: e})}>
                    <Option value="1">1</Option>
                    <Option value="2">2</Option>
                  </Select>
@@ -105,9 +105,9 @@ class Home extends Component {
              </Col>
            </Row>
            <Row style={{margin: 5, padding: 5}}>
-             <Col offset={2} span={13}>
+             <Col offset={2} span={13} style={{width: "100%"}}>
                <Form.Item>
-                 <Checkbox checked={this.state.designItem} value={1000} onChange={(e) => {
+                 <Checkbox style={{width: "50%"}} checked={this.state.designItem} value={1000} onChange={(e) => {
                    if (!this.state.designItem) {
                      this.setState ({desPrice: e.target.value, designItem: !this.state.designItem});
                    }
@@ -116,9 +116,9 @@ class Home extends Component {
                    }
                  }}
                  >
-                   Дизайнерская мебель
+                 <span>Дизайнерская мебель</span>
                  </Checkbox>
-                 <Checkbox checked={this.state.perePlan} value={10000} onChange={(e) => {
+                 <Checkbox style={{width: "50%"}} checked={this.state.perePlan} value={10000} onChange={(e) => {
                    if (!this.state.perePlan) {
                      this.setState ({perePlanPrice: e.target.value, perePlan: !this.state.perePlan});
                    }
@@ -127,14 +127,14 @@ class Home extends Component {
                    }
                  }}
                  >
-                   Перепланировка
+                   <span>Перепланировка</span>
                  </Checkbox>
                </Form.Item>
              </Col>
-             <Col offset={2} span={2}>
-               <Form.Item>
-                 <Button type="primary" htmlType="submit" onClick={() => {
-                  //  нельзя такие длинные строчки оставлять
+             <Col offset={2} span={2} style={{width: "100%"}}>
+               <Form.Item >
+                 <Button type="primary"  htmlType="submit"
+                         onClick={() => {
                    let totalPrice = (this.state.m2 * 10000) + (this.state.countBath * 30000) + (this.state.countDoor * 10000) + (this.state.countRoom * this.state.perePlanPrice) + (this.state.desPrice * this.state.m2);
                    if (address!== null&&m2!== null&& countBath!== null&& countDoor!== null&& countRoom !== null) {
                      this.props.addCardAC (address, m2, countBath, countDoor, countRoom, desPrice, perePlanPrice, totalPrice);

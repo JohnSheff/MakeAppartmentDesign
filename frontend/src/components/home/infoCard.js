@@ -7,13 +7,6 @@ import {Link} from 'react-router-dom';
 
 
 class InfoCard extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
-
   render() {
 const columns = [
   { title: 'Материал', dataIndex: 'title', key: 'title' },
