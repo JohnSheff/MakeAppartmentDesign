@@ -45,7 +45,7 @@ class LoginForm extends Component {
                   prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   placeholder="Введите ваш логин"
                   autoComplete="Username"
-                  required="true"
+                  required={true}
                   onChange={(e) => this.setState({ username: e.target.value })}
                 />
               </Form.Item>
@@ -53,7 +53,7 @@ class LoginForm extends Component {
                 <Input.Password
                   prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   type="password"
-                  required="true"
+                  required={true}
                   placeholder="Введите ваш пароль"
                   autoComplete="current-password"
                   onChange={(e) => this.setState({ password: e.target.value })}

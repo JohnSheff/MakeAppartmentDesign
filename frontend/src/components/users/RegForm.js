@@ -27,8 +27,7 @@ class RegForm extends React.Component {
       icon: <Icon type="frown" style={{ color: '#108ee9' }} />,
       message: 'Произошла ошибка',
       description:
-        'Данный пользователь уже существует',
-
+        'Некорректно введены данные. По пробуйте снова',
     });
   };
 
@@ -64,7 +63,7 @@ class RegForm extends React.Component {
                   prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   placeholder="Username"
                   autoComplete="Username"
-                  required="true"
+                  required={true}
                   value={username} onChange={(e) => {
                     this.setState({ username: e.target.value });
                   }} />
@@ -75,7 +74,7 @@ class RegForm extends React.Component {
 
                   prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   type="password"
-                  required="true"
+                  required={true}
                   placeholder="Password"
                   autoComplete="current-password"
                   value={password} onChange={(e) => {
@@ -86,7 +85,7 @@ class RegForm extends React.Component {
                 <Input
 
                   prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                  required="true"
+                  required={true}
                   placeholder="Email"
                   autoComplete="current-password"
                   value={email}

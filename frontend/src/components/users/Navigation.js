@@ -29,18 +29,21 @@ class Navigation extends Component {
   render() {
     return (
       <Menu onClick={this.handleClick} mode="horizontal" selectedKeys={[this.state.current]}>
+  
+        {this.props.isLogin ?
         <Menu.Item key="home">
           <Link to="/">
             <Icon type="code" /> Home
         </Link>
         </Menu.Item>
-        {this.props.isLogin ?
+         : <></>}
+         {this.props.isLogin ?
           <Menu.Item>
             <Link to="/room">
               <Icon type="snippets" /> AppartmentDesign
         </Link>
-          </Menu.Item> : <></>}
-
+          </Menu.Item>
+          : <></>}
         {this.props.isLogin ? (<Menu.Item style={{ float: 'right' }}>
           <Link to="/logout" onClick={async (e) => {
             e.preventDefault();
@@ -52,6 +55,7 @@ class Navigation extends Component {
               }
             });
             let result = await response.json();
+            console.log(result)
             this.props.logout(!result);
             this.props.history.push('/login');
             this.openNotification(result.user);
