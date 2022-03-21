@@ -56,10 +56,7 @@ class Routers extends Component {
           <Route path='/info' component={List} />
         </Content>
         <Footer style={{ backgroundColor: "white" , display:'flex', justifyContent: 'space-between'}} >Контакты:
-          
-          <Icon type="instagram" style={{fontSize: '30px', color: '#08c'}} theme=""
-            onClick={() => {window.open('https://www.instagram.com/elbrus.bootcamp/')}}
-          />
+       
           <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""
             onClick={() => {window.open('https://slack.com/intl/en-ru/')}}
           />
